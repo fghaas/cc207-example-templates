@@ -26,6 +26,8 @@ parameters:
     type: string
     description: "Subnetpool name or ID (IPv6 only)"
     default: ipv6_tenant_pool
+    constraints:
+      - custom_constraint: neutron.subnetpool
   ipv6_mode:
     type: string
     description: "Mode to be used for address assignment and router advertisement (IPv6 only)"
