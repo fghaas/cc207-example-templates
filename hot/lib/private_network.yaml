@@ -1,4 +1,4 @@
-heat_template_version: 2016-10-14
+heat_template_version: wallaby
 
 description: >
   Template that creates a private network.
@@ -75,14 +75,14 @@ resources:
   router-interface-ipv4:
     type: OS::Neutron::RouterInterface
     properties:
-      router_id: { get_resource: router }
+      router: { get_resource: router }
       subnet: { get_resource: private_subnet_ipv4 }
 
   router_interface_ipv6:
     type: OS::Neutron::RouterInterface
     properties:
-      router_id: { get_resource: router }
-      subnet_id: { get_resource: private_subnet_ipv6}
+      router: { get_resource: router }
+      subnet: { get_resource: private_subnet_ipv6}
 
 outputs:
   network:

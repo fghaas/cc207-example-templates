@@ -1,4 +1,4 @@
-heat_template_version: 2016-10-14
+heat_template_version: wallaby
 
 description: >
   Template that creates a security group allowing all access from
